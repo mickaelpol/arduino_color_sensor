@@ -111,8 +111,8 @@ void loop() {
   buttonState = digitalRead(pinGreen);
   Serial.println(buttonState);
 
-   getColor();
-   delay(500);
+  getColor();
+  delay(500);
   if (DEBUG) printData(); 
   elapsedTime = millis()-startTiming; 
 
@@ -168,12 +168,12 @@ void readRGB()
     digitalWrite(s3, LOW);
     red = red + pulseIn(outPin, LOW);
   
-   //read green component
+  //read green component
     digitalWrite(s2, HIGH);
     digitalWrite(s3, HIGH);
     grn = grn + pulseIn(outPin, LOW);
     
-   //let's read blue component
+  //let's read blue component
     digitalWrite(s2, LOW);
     digitalWrite(s3, HIGH);
     blu = blu + pulseIn(outPin, LOW);
